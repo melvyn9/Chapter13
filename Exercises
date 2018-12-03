@@ -22,3 +22,12 @@ def snake(file):
 snake("test.txt")
 
 #3
+file_w = open("numbered.txt","w")
+text = file_r.readlines()
+line = []
+for i in range(0, len(text)):
+    line.append(str(i+1))
+    line.append(" ")
+    line.append(text[i])
+print(line)
+file_w.write(''.join(line))
