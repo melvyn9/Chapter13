@@ -31,3 +31,15 @@ for i in range(0, len(text)):
     line.append(text[i])
 print(line)
 file_w.write(''.join(line))
+
+#4
+File1 = open("test.txt1","r")
+File2 = open("test.txt2","w")
+while True:
+    line = str(File1.readline())
+    if len(line) == 0:
+        break
+    File1.write(line[5:])
+
+File1.close()
+File2.close()
